@@ -3,7 +3,7 @@ const morgan = require('morgan')
 const cors = require('cors')
 
 const app = express()
-// Creates token: body and assign req.body to it
+// Creates token: body and assign req.body to it,
 morgan.token('body', (req, res) => JSON.stringify(req.body))
 // Custom morgan call -> Simple would be: app.use(morgan('tiny))
 app.use(morgan(':method :url :status :response-time ms - :res[content-length] :body - :req[content-length]'))
